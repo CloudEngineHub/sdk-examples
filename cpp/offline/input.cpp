@@ -116,6 +116,7 @@ public:
 
     bool next(Data &data) final {
         if (!std::getline(jsonlFile, line)) return false;
+
         data.video0 = nullptr;
         data.video1 = nullptr;
         data.accelerometer = nullptr;
@@ -223,8 +224,8 @@ public:
 
     std::string getCalibration() const final {
         return R"({ "cameras": [
-            { "focalLengthX": 1.0, "focalLengthY": 1.0, "model": "pinhole", "imuToCamera": [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]] },
-            { "focalLengthX": 1.0, "focalLengthY": 1.0, "model": "pinhole", "imuToCamera": [[1,0,0,1],[0,1,0,0],[0,0,1,0],[0,0,0,1]] }
+            { "focalLengthX": 1.0, "focalLengthY": 1.0, "principalPointX": 320, "principalPointY": 240, "imageWidth": 640, "imageHeight": 480, "model": "pinhole", "imuToCamera": [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]] },
+            { "focalLengthX": 1.0, "focalLengthY": 1.0, "principalPointX": 320, "principalPointY": 240, "imageWidth": 640, "imageHeight": 480, "model": "pinhole", "imuToCamera": [[1,0,0,1],[0,1,0,0],[0,0,1,0],[0,0,0,1]] }
         ] })";
     }
 };
