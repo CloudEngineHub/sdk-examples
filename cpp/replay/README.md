@@ -2,7 +2,7 @@
 
 This example shows how to replay recordings created using Spectacular AI SDK. The header `spectacularAI/replay.hpp` is primarily used.
 
-* Tested platforms: Linux
+* Tested platforms: Linux, Windows
 * Dependencies: CMake, FFmpeg (for video input)
 
 ## Setup
